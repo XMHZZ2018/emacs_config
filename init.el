@@ -35,13 +35,18 @@
             (package-install package)))
       myPackages)
 
+
 ;; ===================================
 ;; Basic Customization
 ;; ===================================
 (require 'ido)
 (ido-mode t)                        ;; ido mode for easily finding path
 (setq inhibit-startup-message t)    ;; Hide the startup message
-;;(load-theme 'material-light t)
+
+;;(load-theme 'material-light t)    ;; Previous used theme
+;; M+x package-install RET spacemacs-theme
+;; M+x customize-themes: choose spacemacs-light
+
 (global-linum-mode t)               ;; Enable line numbers globally
 
 
@@ -58,9 +63,13 @@
 
 ;; Enable Blacken
 (add-hook 'elpy-mode-hook 'blacken-mode)
+;; Enable Show-paren
 (add-hook 'elpy-mode-hook 'show-paren-mode)
 
+
 ;; User-Defined init.el ends here
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
